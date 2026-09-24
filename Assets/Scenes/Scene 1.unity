@@ -3029,8 +3029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fbd20723f7fc439811061511237ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jeff
-  moveSpeed: 15
-  sneakSpeed: 9
+  moveSpeed: 8
+  sneakSpeed: 4
 --- !u!54 &1962175726
 Rigidbody:
   m_ObjectHideFlags: 0

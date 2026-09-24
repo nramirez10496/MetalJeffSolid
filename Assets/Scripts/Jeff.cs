@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Jeff : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 15f;
-    [SerializeField] float sneakSpeed = 7f;
+    [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float sneakSpeed = 4f;
 
     Rigidbody rb;
     Vector2 moveInput;
@@ -29,7 +29,8 @@ public class Jeff : MonoBehaviour
 
         if (movement != Vector3.zero)
         {
-            rb.AddForce(movement * currentSpeed, ForceMode.Acceleration);
+            movement = movement.normalized;
+            rb.linearVelocity = new Vector3(movement.x*currentSpeed,rb.linearVelocity.y,movement.z*currentSpeed);
         }
         else
         {
